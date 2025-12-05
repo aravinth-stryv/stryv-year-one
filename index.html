@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Year at Stryv - Thank You</title>
+    <style>
+        /* CSS Reset and Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* The Card Container */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        /* The Hidden Message Area */
+        .message-content {
+            display: none; /* Hidden by default */
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        /* The Launch Button */
+        button {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            background: #4facfe;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #4facfe;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #00f2fe;
+            box-shadow: 0 0 25px #00f2fe;
+            transform: scale(1.05);
+        }
+
+        /* Animation Keyframes */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon">🚀</div>
+        <h1>Completed 1 Year </h1>
+        <div class="role">AI Engineer @ Stryv</div>
+        
+        <div id="intro-text">
+            <p>Ready to start the engine for Year 2?</p>
+            <button onclick="revealMessage()">Ignite Engine</button>
+        </div>
+
+        <div class="message-content" id="msg">
+            <p><strong>Thank you everyone!</strong></p>
+            <p>From day one, this journey has been a magical roller coaster. 🎢</p>
+            <p>Just as a pilot needs a runway to take off, your support has helped me gain speed. Now, the engine is started, and I'm ready to explore the limitless sky of AI with all of you.</p>
+            <p>Here’s to more fun, learning, and growth! ✨</p>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            var btn = document.getElementById("intro-text");
+            var msg = document.getElementById("msg");
+            
+            // Hide button
+            btn.style.display = "none";
+            
+            // Show message with fade in
+            msg.style.display = "block";
+            setTimeout(function() {
+                msg.style.opacity = "1";
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
